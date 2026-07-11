@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="홍성진의 디지털 명함">
+  <title>홍성진 | 디지털 명함</title>
+  <style>
+    :root {
+      --ink: #19314a;
+      --muted: #64758a;
+      --sky: #eaf7ff;
+      --mint: #e4faee;
+      --coral: #ff8a7a;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: var(--ink);
+      font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+      background: linear-gradient(135deg, var(--sky), #fffaf5 54%, var(--mint));
+    }
+
+    main {
+      width: min(100%, 420px);
+    }
+
+    .card {
+      overflow: hidden;
+      padding: 42px 34px 34px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, .85);
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .82);
+      box-shadow: 0 20px 55px rgba(47, 96, 127, .15);
+      backdrop-filter: blur(12px);
+    }
+
+    .profile {
+      width: 132px;
+      aspect-ratio: 1;
+      display: block;
+      margin: 0 auto 24px;
+      object-fit: cover;
+      border: 6px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 10px 22px rgba(37, 111, 150, .18);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 2.5rem);
+      letter-spacing: -.06em;
+    }
+
+    .organization {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .intro {
+      margin: 23px 0 25px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+      color: #2d6071;
+      font-size: .88rem;
+      font-weight: 700;
+      background: #effaff;
+      border-radius: 999px;
+    }
+
+    .tag:nth-child(2) { background: #fff1ed; color: #a45345; }
+    .tag:nth-child(3) { background: #effbf1; color: #35714a; }
+
+    .email {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 54px;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+      background: var(--coral);
+      border-radius: 16px;
+      box-shadow: 0 9px 18px rgba(255, 138, 122, .26);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .email:hover, .email:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 13px 24px rgba(255, 138, 122, .34);
+    }
+
+    .email:focus-visible { outline: 3px solid #ffd2ca; outline-offset: 3px; }
+
+    @media (max-width: 380px) {
+      body { padding: 16px; }
+      .card { padding: 34px 23px 25px; border-radius: 24px; }
+      .profile { width: 116px; margin-bottom: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="name">
+      <img class="profile" src="img.png" alt="홍성진 프로필 사진">
+      <h1 id="name">홍성진</h1>
+      <p class="organization">인동고등학교</p>
+      <p class="intro">화학을 좋아하는 사람</p>
+      <div class="tags" aria-label="관심사">
+        <span class="tag">화학 실험</span>
+        <span class="tag">육아</span>
+        <span class="tag">화학</span>
+      </div>
+      <a class="email" href="mailto:tjdwls@aa.ddd">이메일 보내기</a>
+    </section>
+  </main>
+</body>
+</html>
